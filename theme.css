@@ -1,0 +1,63 @@
+/* ♡ Pinky glitter melody world — loads after style.css */
+:root{--pink:#ffd3e8;--hot:#ff5fa2;--bubble:#ff9ccb;--berry:#c2306f;--ink:#a3336f;--muted:#b04a80;--glass:rgba(255,244,250,.84);--shadow:0 14px 40px rgba(255,95,162,.25)}
+body{font-family:'Fredoka','Quicksand',system-ui,sans-serif;color:var(--ink);
+background:radial-gradient(rgba(255,255,255,.85) 16%,transparent 17%) 0 0/44px 44px,radial-gradient(rgba(255,255,255,.55) 13%,transparent 14%) 22px 22px/44px 44px,linear-gradient(160deg,#ffc2de,#ffe3f1 45%,#ffd0ea 72%,#ffb5d8);background-attachment:fixed}
+body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55;
+background:radial-gradient(circle,#fff 0 1px,transparent 2px) 0 0/61px 67px,radial-gradient(circle,#fff 0 1.5px,transparent 2.5px) 20px 31px/83px 79px,radial-gradient(circle,#ffe27a 0 1px,transparent 2px) 41px 12px/97px 89px;animation:glit 3.2s ease-in-out infinite alternate}
+@keyframes glit{from{opacity:.25;background-position:0 0,20px 31px,41px 12px}to{opacity:.75;background-position:6px 5px,15px 38px,47px 6px}}
+@keyframes shine{to{background-position:200% 0}}
+@keyframes floatUp{from{transform:translateY(0) rotate(-12deg);opacity:0}12%{opacity:.85}to{transform:translateY(-115vh) rotate(18deg);opacity:0}}
+@keyframes sweep{to{transform:translateX(260%) skewX(-20deg)}}
+.ambient{background:radial-gradient(ellipse at 50% 10%,rgba(255,255,255,.8),transparent 52%)}
+.sky-glow{background:rgba(255,255,255,.4)}
+.cloud,.gate-cloud,.sky-world::before,.sky-world::after{background:rgba(255,255,255,.82);box-shadow:0 10px 24px rgba(255,120,175,.22)}
+.moon,.moon-illustration{color:#fff3b8;text-shadow:0 0 16px #fff,0 0 38px #ff9ccb}
+.background-star{color:#fff;text-shadow:0 0 6px #fff,0 0 14px #ff6fb5}
+.sparkle{text-shadow:0 0 8px #fff,0 0 16px #ff5fa2;z-index:60}
+.floaty{position:absolute;bottom:-40px;animation:floatUp var(--d,16s) linear infinite;animation-delay:var(--dl,0s);filter:drop-shadow(0 3px 6px rgba(255,80,150,.35))}
+body.reduce-motion .floaty,body.reduce-motion::before{display:none}
+/* top bar */
+.brand{color:var(--berry);font-family:'Pacifico',cursive;font-size:1rem}.brand-mark{font-size:1.5rem;color:var(--hot)}
+.star-counter,.icon-button{background:#fff;border:2px solid var(--bubble);color:var(--berry);box-shadow:0 3px 0 #ffb3d6;font-weight:600}
+.icon-button:hover{background:#ffe3f1}
+/* type */
+h1,h2,h3{font-family:'Pacifico','Fredoka',cursive;font-weight:400;letter-spacing:0;line-height:1.2;color:var(--berry)}
+h1{font-size:clamp(2.2rem,9vw,4rem)}h2{font-size:clamp(1.9rem,7vw,3rem)}h3{font-size:clamp(1.4rem,5vw,2rem)}
+h1 em,h2 em,h3 em{font-style:normal;background:linear-gradient(90deg,#ff3d94,#ff9ccb,#c77dff,#ff3d94);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+.eyebrow{color:var(--hot);font-weight:700;letter-spacing:.14em}
+.lede,.quiet-note,.garden-whisper,.garden-counter,.sigil-progress,.bottom-note,.little-label,.ending-credit{color:var(--muted)}
+.lede{font-size:1.02rem}
+/* cards */
+.storybook-frame,.sky-world,.final-card,.secret-room-card,.constellation-board,.moonflower-garden,.melody-world,.secret-reveal,.clue-card,.star-journal{background:linear-gradient(180deg,rgba(255,255,255,.78),rgba(255,226,240,.6))!important;border:4px solid #fff!important;box-shadow:0 0 0 3px #ffb3d6,var(--shadow)!important}
+.gate-frame::before{border:2px dotted #ff8fc3!important;opacity:.8}
+.storybook-frame::after,.final-card::after,.secret-room-card::after,.modal-card::after{content:'🎀';position:absolute;top:12px;left:16px;font-size:2rem;transform:rotate(-18deg);filter:drop-shadow(0 3px 4px rgba(255,80,150,.4));pointer-events:none}
+.final-card::after,.secret-room-card::after{content:'🍓';top:-4px;left:auto;right:14px}
+.modal-card::after{content:'🌷';left:auto;right:16px;top:10px}
+.final-card,.secret-room-card{position:relative}
+.garden-grass{background:linear-gradient(180deg,#ff9ccb,#ff6fae)!important;opacity:.55}
+.garden-flower,.wonder,.sigil-card{background:#fff!important;border:3px solid #ffb3d6!important;color:var(--berry);box-shadow:0 5px 0 #ffc3df,0 10px 20px rgba(255,95,162,.25)}
+.garden-flower span,.flower-mark,.flower-art{color:var(--hot)!important;text-shadow:0 0 10px #fff,0 0 18px #ff9ccb}
+.garden-flower.discovered,.sigil-card.found{background:#ffe0ef!important;border-color:var(--hot)!important}
+.collect-star{color:#ffd24d;text-shadow:0 0 8px #fff,0 0 20px #ff6fb5}.collect-star.collected{color:var(--hot)}
+.constellation-lines path{stroke:#ff7fb8}
+.bunny-hood{background:linear-gradient(145deg,#fff,#ffc4df)!important;border:3px solid #fff!important}
+.hood-ear{background:#ffb3d6!important}.hood-face{color:var(--hot)!important}.bunny-ribbon{font-size:0}.bunny-ribbon::before{content:'🎀';font-size:1.6rem}
+/* buttons */
+.primary-button{position:relative;overflow:hidden;background:linear-gradient(135deg,#ff8fc3,#ff4f9b)!important;color:#fff!important;border:3px solid #fff!important;box-shadow:0 5px 0 #d6397f,0 12px 22px rgba(255,79,155,.4)!important;text-shadow:0 1px 2px rgba(160,30,90,.4);font-weight:600;letter-spacing:.02em}
+.primary-button::after{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);animation:sweep 3s ease-in-out infinite}
+.primary-button:hover{transform:translateY(-3px)}.primary-button:active{transform:translateY(3px);box-shadow:0 2px 0 #d6397f!important}
+.primary-button:disabled{filter:saturate(.7);opacity:.85}
+.text-button{color:var(--berry)}.text-button:hover{color:var(--hot)}
+.clue-card{color:var(--ink)}.clue-card small{color:var(--muted)}.clue-card.done{border-color:var(--hot)!important}
+.clue-check{color:var(--hot)}
+/* letters */
+.envelope{background:linear-gradient(145deg,#ff9ccb,#ffc6e0)!important;border:3px solid #fff!important;box-shadow:0 0 0 3px #ffb3d6,0 18px 36px rgba(255,79,155,.3)!important}
+.envelope-flap{border-color:#ffe6f2 transparent transparent!important}.envelope-heart{color:#ff3d7f!important;text-shadow:0 0 12px #fff}.envelope-front-label{color:var(--berry)}
+.letter-paper,.final-letter,.treasure-letter{background:linear-gradient(180deg,#fff,#fff0f7)!important;border:3px dotted #ff9ccb!important;color:#8a3a68;font-size:.98rem;line-height:1.75}
+.letter-salutation{font-family:'Pacifico',cursive;color:var(--berry);font-size:1.4rem}.letter-signoff{font-family:'Pacifico',cursive;font-style:normal;color:var(--hot);font-size:1rem}
+.paper-flower,.final-heart,.treasure-flower,.secret-stars,.modal-sparkle{color:var(--hot)!important;text-shadow:0 0 10px #fff,0 0 20px #ffb3d6}
+.modal-card{background:linear-gradient(160deg,#fff,#ffe3f1)!important;border:4px solid #fff!important;box-shadow:0 0 0 3px #ffb3d6,0 20px 60px rgba(255,79,155,.35)!important}
+.modal-card p:not(.eyebrow){color:#8a3a68}.modal-backdrop{background:rgba(255,120,180,.28)}
+.toast{background:#fff!important;border:3px solid var(--bubble)!important;color:var(--berry)!important;font-weight:600}
+.meteor{background:linear-gradient(90deg,transparent,#fff,#ff8fc3)!important}
+@media(max-width:560px){.storybook-frame::after{font-size:1.6rem}}

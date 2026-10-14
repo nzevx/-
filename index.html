@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffc2de">
+  <meta name="description" content="A dreamy little storybook universe made especially for Yomna.">
+  <title>A Little Universe Made for Yomna ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="sky-glow"></div>
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+    <div class="cloud cloud-three"></div>
+    <div class="moon">☾</div>
+    <div id="starfield"></div>
+    <div id="sparkle-layer"></div>
+  </div>
+
+  <header class="topbar">
+    <a class="brand" href="#" id="home-link" aria-label="Back to the beginning">
+      <span class="brand-mark">🎀</span><span>A little universe</span>
+    </a>
+    <div class="top-actions">
+      <span class="star-counter" aria-live="polite">✦ <span id="star-count">0</span>/<span id="star-total">6</span></span>
+      <button class="icon-button" id="sound-toggle" aria-label="Toggle melody" title="Play or pause the tiny melody" aria-pressed="false">♪</button>
+      <button class="icon-button" id="motion-toggle" aria-label="Toggle reduced motion" title="Reduce motion">✧</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="scene active" id="scene-gate" data-scene="0">
+      <div class="storybook-frame gate-frame">
+        <div class="little-label">A tiny story, just for you</div>
+        <div class="moon-illustration" aria-hidden="true">☾<span>✦</span></div>
+        <div class="gate-cloud cloud-art cloud-art-left"></div>
+        <div class="gate-cloud cloud-art cloud-art-right"></div>
+        <div class="bunny-guide" aria-hidden="true">
+          <div class="bunny-hood"><span class="hood-ear left"></span><span class="hood-ear right"></span><span class="hood-face">♡</span></div>
+          <span class="bunny-body"></span>
+          <span class="bunny-ribbon">✿</span>
+        </div>
+        <p class="eyebrow">for my 𐙚𓍢ִ໋𝓐𝓷𝓰𝓮𝓵𓍢ִ໋𐙚</p>
+        <h1>A Little Universe<br><em>Made for You</em></h1>
+        <p class="lede">Somewhere between the clouds and the stars, a little universe was waiting for you.</p>
+        <button class="primary-button" id="enter-button">Enter my universe <span>✧</span></button>
+        <div class="bottom-note">take your time · there is no rush</div>
+      </div>
+    </section>
+
+    <section class="scene" id="scene-sky" data-scene="1" aria-hidden="true">
+      <div class="scene-heading">
+        <p class="eyebrow">chapter one · a sky of your own</p>
+        <h2>Welcome to your<br><em>little somewhere.</em></h2>
+        <p class="lede">Tap the little wonders. Some of them have something to tell you.</p>
+        <p class="garden-whisper">Follow the flowers, listen for the melody, and keep an eye on the sky. ✧</p>
+      </div>
+      <div class="sky-world">
+        <button class="wonder wonder-bunny" data-wonder="bunny" aria-label="Discover the little bunny"><span class="bunny-mini">♡</span><small>the guide</small></button>
+        <button class="wonder wonder-orange" data-wonder="orange" aria-label="Discover the orange cat"><span class="cat-face orange-cat">🐈</span><small>the orange cat</small></button>
+        <button class="wonder wonder-black" data-wonder="black" aria-label="Discover the black cat"><span class="cat-face black-cat">🐈‍⬛</span><small>the black cat</small></button>
+        <button class="wonder wonder-star" data-wonder="lasagna" aria-label="Find a silly secret"><span>✦</span><small>something odd</small></button>
+        <button class="wonder wonder-flower" data-wonder="flower" aria-label="Discover the moonflower"><span class="flower-mark">✿</span><small>moonflower</small></button>
+        <div class="floating-notes" aria-hidden="true"><span>♪</span><span>♫</span><span>♬</span></div>
+        <div class="world-caption">A soft place among the stars</div>
+      </div>
+      <div class="scene-footer"><button class="text-button" data-next="2">Visit the moonflower garden <span>→</span></button></div>
+    </section>
+
+    <section class="scene" id="scene-garden" data-scene="2" aria-hidden="true">
+      <div class="scene-heading">
+        <p class="eyebrow">chapter two · the moonflower garden</p>
+        <h2>A little garden<br><em>under the moon.</em></h2>
+        <p class="lede">Four flowers grew here while the universe was waiting for Roo. Tap one to see what it has been keeping.</p>
+      </div>
+      <div class="moonflower-garden">
+        <div class="garden-moon">☾</div><div class="garden-firefly firefly-one">✦</div><div class="garden-firefly firefly-two">✧</div><div class="garden-firefly firefly-three">·</div>
+        <button class="garden-flower flower-lily" data-garden-flower="lily" aria-label="Open the moon lily"><span>✿</span><small>moon lily</small></button>
+        <button class="garden-flower flower-rose" data-garden-flower="rose" aria-label="Open the pink rose"><span>❀</span><small>pink rose</small></button>
+        <button class="garden-flower flower-bloom" data-garden-flower="bloom" aria-label="Open the little bloom"><span>✾</span><small>little bloom</small></button>
+        <button class="garden-flower flower-wish" data-garden-flower="wish" aria-label="Open the wish flower"><span>✿</span><small>wish flower</small></button>
+        <div class="garden-grass" aria-hidden="true"></div>
+      </div>
+      <p class="garden-counter" id="garden-counter" aria-live="polite">0 of 4 little flowers discovered ✿</p>
+      <div class="scene-footer"><button class="text-button" data-next="3">Follow the melody <span>→</span></button></div>
+    </section>
+
+    <section class="scene" id="scene-melody" data-scene="3" aria-hidden="true">
+      <div class="melody-world">
+        <div class="melody-orb orb-one"></div><div class="melody-orb orb-two"></div><div class="melody-orb orb-three"></div>
+        <div class="music-box-art"><span class="music-box-star">✧</span><span class="music-box-note">♫</span><span class="music-box-base"></span></div>
+        <div class="melody-note note-one">♪</div><div class="melody-note note-two">♫</div><div class="melody-note note-three">♬</div>
+      </div>
+      <div class="scene-heading melody-heading">
+        <p class="eyebrow">chapter three · a melody in the clouds</p>
+        <h2>A little song<br><em>for your universe.</em></h2>
+        <p class="lede">Tap the music note in the top corner to let a tiny original melody drift through this place. No lyrics, no rush — just a little sound for the stars.</p>
+      </div>
+      <button class="primary-button melody-play-button" id="melody-scene-button">Play the tiny melody <span>♫</span></button>
+      <p class="quiet-note melody-note-caption">You can pause it whenever you like. The magic will wait.</p>
+      <div class="scene-footer"><button class="text-button" data-next="4">Follow the constellations <span>→</span></button></div>
+    </section>
+
+    <section class="scene" id="scene-constellations" data-scene="4" aria-hidden="true">
+      <div class="scene-heading">
+        <p class="eyebrow">chapter four · little things that shine</p>
+        <h2>Constellations<br><em>of you.</em></h2>
+        <p class="lede">Choose a star. Each one holds a little thought for you.</p>
+      </div>
+      <div class="constellation-board">
+        <svg class="constellation-lines" viewBox="0 0 320 240" aria-hidden="true">
+          <path d="M50 58 L105 92 L155 48 L215 88 L265 42 M105 92 L90 166 L160 194 L225 157 L215 88" />
+        </svg>
+        <button class="collect-star star-a" data-star="0" aria-label="Little things">✦</button>
+        <button class="collect-star star-b" data-star="1" aria-label="Your own world">✧</button>
+        <button class="collect-star star-c" data-star="2" aria-label="A wish for you">✦</button>
+        <button class="collect-star star-d" data-star="3" aria-label="A little reminder">✧</button>
+        <button class="collect-star star-e" data-star="4" aria-label="A quiet wish">✦</button>
+        <button class="collect-star star-f" data-star="5" aria-label="A hidden path">✧</button>
+      </div>
+      <div class="star-journal"><span>✧</span> <span id="journal-text">Your little star journal is waiting.</span></div>
+      <div class="scene-footer"><button class="text-button" data-next="5">A letter is waiting <span>→</span></button></div>
+    </section>
+
+    <section class="scene" id="scene-letter" data-scene="5" aria-hidden="true">
+      <div class="scene-heading">
+        <p class="eyebrow">chapter five · folded with care</p>
+        <h2>A little letter<br><em>for Roo.</em></h2>
+      </div>
+      <div class="letter-stage">
+        <button class="envelope" id="open-letter" aria-label="Open the letter">
+          <span class="envelope-flap"></span><span class="envelope-heart">♡</span>
+          <span class="envelope-front-label">open when you're ready</span>
+        </button>
+        <article class="letter-paper" id="letter-paper" aria-hidden="true">
+          <button class="letter-close" id="close-letter" aria-label="Close the letter">×</button>
+          <div class="paper-flower">✿</div>
+          <p class="letter-salutation">To my 𐙚𓍢ִ໋𝓐𝓷𝓰𝓮𝓵𓍢ִ໋𐙚</p>
+          <p>Some people make the world feel a little softer just by being themselves. You do that in your own wonderfully unusual way — with your creativity, your humor, your curious mind, and all the little things that make you <em>you</em>.</p>
+          <p>I hope this tiny place reminds you that you deserve gentle days, little joys, and room to be yourself. You don't have to be anything other than Yomna here.</p>
+          <p class="letter-signoff">A little corner of the universe is cheering for you. ♡</p>
+          <button class="primary-button small-button" id="keep-letter">Keep this letter <span>♡</span></button>
+        </article>
+      </div>
+      <div class="scene-footer"><button class="text-button" data-next="6">There’s one more little secret <span>→</span></button></div>
+    </section>
+
+    <section class="scene" id="scene-secret" data-scene="6" aria-hidden="true">
+      <div class="scene-heading">
+        <p class="eyebrow">chapter six · follow the tiny clues</p>
+        <h2>The hidden<br><em>constellation.</em></h2>
+        <p class="lede">Three little pieces belong together. Tap each one to bring the stars closer.</p>
+      </div>
+      <div class="clue-list">
+        <button class="clue-card" data-clue="0"><span class="clue-icon">🍝</span><span><strong>The very first layers</strong><small>A question about lasagna. A very important investigation.</small></span><span class="clue-check">＋</span></button>
+        <button class="clue-card" data-clue="1"><span class="clue-icon">📖</span><span><strong>A little memory</strong><small>Pick a moment that belongs only to your story.</small></span><span class="clue-check">＋</span></button>
+        <button class="clue-card" data-clue="2"><span class="clue-icon">🌷</span><span><strong>A promise in the sky</strong><small>Something small, honest, and meant to be kept.</small></span><span class="clue-check">＋</span></button>
+      </div>
+      <div class="secret-reveal" id="secret-reveal" aria-live="polite">
+        <div class="secret-stars">✦　✧　✦</div>
+        <p class="eyebrow">the constellation is complete</p>
+        <h3>Some stories are made of<br><em>the silliest little beginnings.</em></h3>
+        <p>“Did lasagna need layers?” was such a wonderfully unexpected beginning. Maybe that's the magic: a tiny question can become a whole little universe.</p>
+        <p class="promise-line">My promise: to keep learning the little things that make you feel seen, to be honest with you, and to make room for both laughter and quiet days.</p>
+        <button class="primary-button small-button" data-next="7">Make a little wish <span>✧</span></button>
+      </div>
+      <div class="scene-footer"><span class="quiet-note">No rush. Open the clues in any order.</span></div>
+    </section>
+
+    <section class="scene" id="scene-meteor" data-scene="7" aria-hidden="true">
+      <div class="meteor-sky">
+        <div class="meteor" id="meteor" aria-hidden="true"></div>
+        <div class="meteor meteor-two" aria-hidden="true"></div>
+        <div class="ending-constellation">✦ · ✧ · ✦ · ✧ · ✦</div>
+      </div>
+      <div class="final-card">
+        <p class="eyebrow">the last little chapter</p>
+        <h2>Wish upon<br><em>a meteor.</em></h2>
+        <p class="lede">Three little pieces of magic are hidden in this sky. Find them to discover what is waiting for you.</p>
+        <div class="sigil-garden" aria-label="Three magical keepsakes">
+          <button class="sigil-card" data-sigil="flower"><span class="sigil-art flower-art">✿</span><strong>The Flower</strong><small>For the soft things</small></button>
+          <button class="sigil-card" data-sigil="melody"><span class="sigil-art melody-art">♫</span><strong>The Melody</strong><small>For the things you feel</small></button>
+          <button class="sigil-card" data-sigil="meteor"><span class="sigil-art meteor-art">☄</span><strong>The Meteor</strong><small>For every little wish</small></button>
+        </div>
+        <p class="sigil-progress" id="sigil-progress" aria-live="polite">0 of 3 keepsakes found ✧</p>
+        <button class="primary-button" id="wish-button">Make a little wish <span>🌠</span></button>
+        <button class="primary-button secret-door-button" id="secret-door-button" data-next="8" hidden>Open the secret room <span>🗝</span></button>
+        <div class="final-letter" id="final-letter" aria-hidden="true">
+          <div class="final-heart">♡</div>
+          <p class="letter-salutation">To my Roo,</p>
+          <p>If I could leave one little thing in this universe for you, it would be a reminder that you deserve gentle days, beautiful surprises, and moments where you can simply be yourself.</p>
+          <p>And somewhere among all these stars, there’s an orange cat and a black cat who will always have their own silly corner of the universe.</p>
+          <p class="letter-signoff">You are wonderfully, unmistakably you. Never forget that. ♡</p>
+        </div>
+        <button class="text-button replay-button" id="replay-button">Replay our universe ↺</button>
+      </div>
+      <p class="ending-credit">made with a little stardust, just for Yomna ♡</p>
+    </section>
+
+    <section class="scene secret-room-scene" id="scene-secret-room" data-scene="8" aria-hidden="true">
+      <div class="secret-room-art" aria-hidden="true">
+        <div class="room-window"><span>☾</span><i>✦</i><b>✧</b></div>
+        <div class="room-vine vine-left">✿ ❧ ✿</div><div class="room-vine vine-right">✿ ❧ ✿</div>
+        <div class="treasure-box" id="treasure-box"><span class="box-glow"></span><span class="box-lid">✧</span><span class="box-heart">♡</span></div>
+      </div>
+      <div class="secret-room-card">
+        <p class="eyebrow">you found the little door</p>
+        <h2>A room that exists<br><em>just for Roo.</em></h2>
+        <p class="lede">Three little wonders brought you here. There is one last thing tucked inside this tiny universe.</p>
+        <button class="primary-button" id="open-treasure">Open your surprise <span>♡</span></button>
+        <div class="treasure-letter" id="treasure-letter" aria-hidden="true">
+          <div class="treasure-flower">✿　✧　✿</div>
+          <p class="letter-salutation">To my 𐙚𓍢ִ໋𝓐𝓷𝓰𝓮𝓵𓍢ִ໋𐙚</p>
+          <p>If this little universe could keep one thing safe for you, I hope it would be the reminder that you deserve softness, wonder, music that feels like home, flowers that make you pause, and skies full of wishes.</p>
+          <p>I made this tiny room as a place where you can wander slowly, find small magic, and simply be yourself. No puzzle to solve now. No rush. Just a little surprise, made with you in mind.</p>
+          <p class="letter-signoff">Wherever the stars take us, I hope we keep finding little reasons to smile. ♡</p>
+          <button class="text-button" id="back-to-stars">Stay among the stars ↺</button>
+        </div>
+      </div>
+      <p class="ending-credit">a tiny secret, kept for Yomna ‧₊˚𐙚♡</p>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="wonder-modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      <div class="modal-sparkle">✧</div>
+      <p class="eyebrow">a tiny discovery</p>
+      <h3 id="modal-title">A little wonder</h3>
+      <p id="modal-copy"></p>
+      <button class="primary-button small-button" id="modal-done">Keep this little star <span>♡</span></button>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
